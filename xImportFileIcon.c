@@ -26,7 +26,6 @@ OSErr GetFileIconForType(short drvNum, OSType type, OSType creator, SInt8 iconTy
 
 OSErr GetFileIconForType(short drvNum, OSType type, OSType creator, SInt8 iconType, char* outBuffer, long bufferSize) {
 	OSErr 		err = noErr;
-	short 		dirID = 0;
 	DTPBRec 	paramBlock = {0};
 	char 		buffer[kLargeIconSize] = {0};
 	short 		iconID = 0;
@@ -87,7 +86,6 @@ void xcmdmain(void)
 {
 	Str255 		errStr = {0};
 	OSErr 		err = noErr;
-	short 		dirID = 0;
 	Str255 		typeCreator;
 	char 		buffer[kLargeIconSize] = {0};
 	OSType		type;
